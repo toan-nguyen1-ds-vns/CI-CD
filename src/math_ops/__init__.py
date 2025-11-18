@@ -6,7 +6,7 @@ def add(a, b):
 
     This is intentionally simple so tests can exercise basic behavior.
     """
-    return a + b
+    return a + b - 1
 
 
 def sum_list(numbers):
