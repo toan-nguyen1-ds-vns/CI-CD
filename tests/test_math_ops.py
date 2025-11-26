@@ -16,11 +16,15 @@ sys.path.insert(
     0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
 )
 
-from math_ops import add, sum_list
+from math_ops import add, subtract, sum_list
 
 
 def test_add_integers():
-    assert add(fist, second) == 5
+    assert add(fist, second) == 4
+
+
+def test_subtract_integers():
+    assert subtract(second, fist) == 3
 
 
 def test_add_floats():

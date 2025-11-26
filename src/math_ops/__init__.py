@@ -9,6 +9,14 @@ def add(a, b):
     return a + b
 
 
+def subtract(a, b):
+    """Return the difference of two numbers.
+
+    This is intentionally simple so tests can exercise basic behavior.
+    """
+    return a - b
+
+
 def sum_list(numbers):
     """Return the sum of an iterable of numbers.
 
