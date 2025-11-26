@@ -10,9 +10,6 @@ jobs:
   test:
     name: Run tests
     runs-on: ubuntu-latest
-    env:
-      FIST: '2'
-      SECOND: '3'
 
     steps:
       - name: Checkout repository
@@ -36,11 +33,6 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Install tox
+      - name: Run tests
         run: |
-          python -m pip install tox
-
-      - name: Run tests (tox)
-        run: |
-          tox -e py311
-
+          python -m pytest -q
