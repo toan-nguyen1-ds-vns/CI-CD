@@ -35,5 +35,8 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run tests
+        env:
+            FIST: ${{ vars.FIST }}
+            SECOND: ${{ vars.SECOND }}
         run: |
           python -m pytest -q
