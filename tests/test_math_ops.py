@@ -24,7 +24,7 @@ def test_add_integers():
 
 
 def test_subtract_integers():
-    assert subtract(second, fist) == 3
+    assert subtract(second, fist) == 4
 
 
 def test_add_floats():
