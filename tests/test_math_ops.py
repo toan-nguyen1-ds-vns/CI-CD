@@ -2,6 +2,15 @@ import os
 import sys
 import pytest
 
+"""Tests for math_ops.
+
+The tests may read `FIST` and `SECOND` from the environment. To make local
+and CI runs robust we read them with `os.environ.get` and provide sensible
+defaults, then cast to int.
+"""
+
+fist = int(os.environ.get("FIST", "0"))
+second = int(os.environ.get("SECOND", "0"))
 # Ensure `src` directory is on sys.path so tests can import `math_ops` without an install.
 sys.path.insert(
     0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
@@ -11,7 +20,7 @@ from math_ops import add, sum_list
 
 
 def test_add_integers():
-    assert add(2, 3) == 5
+    assert add(fist, second) == 5
 
 
 def test_add_floats():
